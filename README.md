@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: repo-sync
-      uses: tcpl-research/git-sync@v2
+      uses: tcpl/git-sync@v2
       env:
         SOURCE_REPO: ""
         SOURCE_BRANCH: ""
