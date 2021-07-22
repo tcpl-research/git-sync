@@ -48,7 +48,7 @@ sleep 1
 git remote show destination
 sleep 1
 echo "==============================================================="
-git checkout -b $SOURCE_BRANCH
+git checkout $SOURCE_BRANCH
 sleep 1
 git pull destination master --allow-unrelated-histories
 sleep 4
