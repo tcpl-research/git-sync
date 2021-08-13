@@ -45,9 +45,9 @@ git clone "$SOURCE_REPO" --origin source && cd `basename "$SOURCE_REPO" .git`
 sleep 10
 echo "$SOURCE_REPO  cloned"
 
-git remote add $DESTINATION_REPO
+git remote add destination $DESTINATION_REPO
 sleep 2
-echo "remote added $DESTINATION_REPO"
+echo "remote added $DESTINATION_REPO as destination"
 
 echo "----------------------------------------------------------------"
 echo "----------------------------------------------------------------"
