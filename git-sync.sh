@@ -42,19 +42,27 @@ git config user.name
 echo "----------------------------------------------------------------"
 
 git clone "$SOURCE_REPO" --origin source && cd `basename "$SOURCE_REPO" .git`
-git remote add destination "$DESTINATION_REPO"
-git fetch destination
-sleep 1
-git remote show destination
-sleep 1
-echo "==============================================================="
+sleep 10
+echo "$SOURCE_REPO  cloned"
+
+git remote add $DESTINATION_REPO
+sleep 2
+echo "remote added $DESTINATION_REPO"
+
+echo "----------------------------------------------------------------"
+echo "----------------------------------------------------------------"
+
 git checkout $SOURCE_BRANCH
-sleep 1
-git pull destination master --allow-unrelated-histories
 sleep 4
+echo "checked out $SOURCE_BRANCH"
+
+echo "----------------------------------------------------------------"
+
+git fetch $DESTINATION_REPO $DESTINATION_BRANCH
+sleep 4
+echo "fetch complete $DESTINATION_REPO $DESTINATION_BRANCH"
+
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-git remote show destination
-sleep 1
 
 if ! echo $FORCE | grep 'true'
   then    
