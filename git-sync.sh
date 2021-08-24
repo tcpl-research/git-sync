@@ -38,7 +38,7 @@ git config --global user.email "$EMAIL"
 git config user.email
 git config --global user.name "$NAME"
 git config user.name 
-git config --global pull.rebase true
+git config --global pull.rebase false
 
 echo "----------------------------------------------------------------"
 
