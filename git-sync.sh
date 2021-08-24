@@ -38,6 +38,7 @@ git config --global user.email "$EMAIL"
 git config user.email
 git config --global user.name "$NAME"
 git config user.name 
+git config --global pull.rebase true
 
 echo "----------------------------------------------------------------"
 
@@ -62,9 +63,9 @@ git pull destination $DESTINATION_BRANCH --allow-unrelated-histories
 sleep 4
 echo "pull complete $DESTINATION_REPO $DESTINATION_BRANCH"
 
-git fetch $DESTINATION_REPO $DESTINATION_BRANCH
-sleep 4
-echo "fetch complete $DESTINATION_REPO $DESTINATION_BRANCH"
+#git fetch $DESTINATION_REPO $DESTINATION_BRANCH
+#sleep 4
+#echo "fetch complete $DESTINATION_REPO $DESTINATION_BRANCH"
 
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
