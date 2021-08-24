@@ -59,7 +59,7 @@ echo "checked out $SOURCE_BRANCH"
 
 echo "----------------------------------------------------------------"
 
-git pull destination $DESTINATION_BRANCH --allow-unrelated-histories
+git pull destination $DESTINATION_BRANCH --allow-unrelated-histories -X ours
 sleep 4
 echo "pull complete $DESTINATION_REPO $DESTINATION_BRANCH"
 
